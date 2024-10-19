@@ -72,7 +72,6 @@ example_prompt = ChatPromptTemplate.from_messages(
 # Dynamic Few Shot Learning
 faiss_vectorstore = FAISS
 embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-# embedding_model = OpenAIEmbeddings(base_url=os.environ.get('OPENAI_EMBEDDING_API_HOST'), model=os.environ.get('EMBEDDING_MODEL')) # type: ignore
 dynamic_example_selector = SemanticSimilarityExampleSelector.from_examples(
     order_few_shot,
     embedding_model,
