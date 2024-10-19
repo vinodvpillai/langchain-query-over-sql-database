@@ -17,7 +17,7 @@ from util import extract_sql_query
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder, FewShotChatMessagePromptTemplate
 from few_shot_examples import order_few_shot
 # Part 4 - Custom Prompt 
-from custom_prompt_table_info import process_query
+from util_custom_prompt_table_info import process_query
 
 
 # Loading the environment variables
@@ -104,5 +104,3 @@ print(rephrased_chain.invoke({
     "table_info": table_info, 
     "top_k": few_shot_prompt
 }))
-
-# "question": "Total number of orders?", 
